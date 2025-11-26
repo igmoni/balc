@@ -1,10 +1,12 @@
+import Container from '@/components/common/Container'
+import HeroOptions from '@/components/HeroOptions'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      
-    </div>
+    <Container >
+      <HeroOptions/>
+    </Container>
   )
 }
 
