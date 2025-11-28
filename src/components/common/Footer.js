@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import Container from "./Container";
-import { details } from "@/data/Footer";
+import { details, links } from "@/data/Footer";
 import { Button } from "../ui/button";
 import { Link } from "next-view-transitions";
 import Facebook from "@/svgs/Facebook";
@@ -11,18 +11,11 @@ import X from "@/svgs/X";
 import { motion } from "motion/react";
 
 const Footer = () => {
-  const links = [
-    { name: "Home", href: "/" },
-    { name: "Courses", href: "/courses" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
-  ];
+  
   return (
     <motion.div initial={{ y: 30, filter: 'blur(10px)', opacity: 0}} whileInView={{ y: 0, filter: 'blur(0px)', opacity: 1}} transition={{ duration: 0.3, ease: 'easeInOut'}} viewport={{ once: true}}>
       <Container
-        className={"text-white p-7 my-32 bg-blue-700 rounded-md w-full"}
+        className={"text-white p-7 my-32 bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 rounded-md w-full"}
       >
         <div
           className="bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(59,130,246,0.15))] 

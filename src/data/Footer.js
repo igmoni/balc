@@ -39,3 +39,12 @@ export const details = [
     phone: "+91 8884482482 | +91 8884728482",
   },
 ];
+
+export const links = [
+    { name: "Home", href: "/" },
+    { name: "Courses", href: "/courses" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+  ];
