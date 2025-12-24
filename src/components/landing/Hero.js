@@ -81,10 +81,10 @@ const Hero = () => {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
               >
-                <motion.button whileHover={{ scale: 1.05 }} className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-semibold shadow-lg">
-                  Enroll Now
+                <motion.button whileHover={{ y: -2 }} className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold shadow-lg">
+                  Enroll Now  
                 </motion.button>
-                <motion.button whileHover={{ scale: 1.05 }} className="bg-white/90 text-blue-700 px-8 py-4 rounded-lg font-semibold">
+                <motion.button whileHover={{ y: -2 }} className="bg-white/90 text-blue-700 hover:bg-white px-8 py-4 rounded-lg font-semibold">
                   Download Brochure
                 </motion.button>
               </motion.div>

@@ -15,13 +15,17 @@ const testimonials = [
     text: "Hands-down the best training experience. Clear concepts and practical focus.",
   },
   {
+    name: "Bhavana",
+    role: "Data Science",
+    text: "One of the best computer course teaching institute so far!! Faculty teaches each concept in detail.",
+  },
+  {
     name: "Arjun Shetty",
     role: "SAP Consultant",
     text: "Trainers were supportive and the placement help was real, not fake promises.",
   },
 ];
-
-// container stagger
+ 
 const container = {
   hidden: {},
   show: {
@@ -51,7 +55,6 @@ export default function Testimonials() {
     >
       <Container className="py-20 rounded-md bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
-
           {/* TITLE */}
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
@@ -94,10 +97,7 @@ export default function Testimonials() {
                   className="flex justify-center text-yellow-400 mb-3"
                 >
                   {[...Array(5)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      whileHover={{ scale: 1.3, rotate: 10 }}
-                    >
+                    <motion.div key={i} whileHover={{ scale: 1.3, rotate: 10 }}>
                       <Star size={16} fill="#facc15" />
                     </motion.div>
                   ))}
@@ -113,11 +113,9 @@ export default function Testimonials() {
                   <div className="font-semibold text-gray-900">{t.name}</div>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-
               </motion.div>
             ))}
           </motion.div>
-
         </div>
       </Container>
     </motion.div>

@@ -65,9 +65,6 @@ const container = {
   },
 };
 
-// Card animation
-
-
 export default function CoursesSection() {
   return (
     <motion.section
@@ -109,9 +106,8 @@ export default function CoursesSection() {
           {courses.map((course, i) => (
             <motion.div
               key={i}
-              // variants={item}
               whileHover={{ y: -5, scale: 1.005 }}
-              className="bg-white rounded-xl border shadow-sm hover:shadow-xl p-6 transition"
+              className="bg-white rounded-xl border shadow-acternity hover:shadow-lg p-6 transition"
             >
               <course.icon className="w-10 h-10 text-blue-700 mb-3" />
 
@@ -139,7 +135,7 @@ export default function CoursesSection() {
 
                 <motion.button
                   whileHover={{ x: 4 }}
-                  className="text-blue-700 text-sm font-semibold"
+                  className="text-blue-700 text-sm underline-offset-4 hover:underline  font-semibold"
                 >
                   View Details →
                 </motion.button>
