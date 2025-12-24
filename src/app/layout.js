@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Whatsapp from "@/components/common/Whatsapp";
 import Footer from "@/components/common/Footer";
+import { ViewTransitions } from "next-view-transitions";
 
 
 const inter = Inter({
@@ -14,7 +15,7 @@ const inter = Inter({
 export const metadata = {
   title: "BALC - Bharatiya Academy of Linguistics and Communication",
   description: "BALC is a premier computer training institute offering industry-aligned courses in Digital Marketing, Web Development, SAP, Data Science, DTP, and more. Empowering individuals with real-world skills for career success.",
-  icon: '/balc.jpg'
+  icon: '/assets/balc.jpg'
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
         className={`${inter.className} min-h-[200vh] antialiased`}
       >
         <Navbar/>
+        <ViewTransitions>
+
         {children}
+        </ViewTransitions>
         <Whatsapp/>
         <Footer/>
       </body>

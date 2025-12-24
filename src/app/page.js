@@ -13,13 +13,15 @@ const page = () => {
   return (
     <Container >
       <Hero/>
-      <CoursesSection/>
+      <CoursesSection/> 
+      {/* Should change the above  */}
       <Testimonials/>
+      {/* Add 3 more testimonials and change the bakground and styling with animations */}
       <HowItWorksSection/>
       <FeaturesSection/>
       <EnquiryForm/>
       <FAQ/>
-      <BlogSection/>x``
+      <BlogSection/>
     </Container>
   )
 }

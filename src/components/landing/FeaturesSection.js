@@ -4,7 +4,7 @@ import { Monitor, Users, Cpu, MapPin, Headphones, CheckCircle2 } from "lucide-re
 const features = [
   {
     title: "Modern Computer Labs",
-    desc: "Fully-equipped labs with licensed software and high-performance systems.",
+    desc: "Fully-equipped labs with  high-performance systems.",
     icon: Cpu,
   },
   {

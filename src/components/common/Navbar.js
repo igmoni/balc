@@ -1,6 +1,6 @@
 'use client'
 import { useState, useCallback } from 'react'
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { useMotionValueEvent, useScroll, useTransform, motion, AnimatePresence } from 'motion/react'

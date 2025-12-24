@@ -15,12 +15,12 @@ const steps = [
   },
   {
     title: "3. Projects & Certification",
-    desc: "Work on real-world assignments and earn industry-recognized certificates.",
+    desc: "Give a assessment and earn industry-recognized certificates.",
     icon: Award,
   },
   {
     title: "4. Placement Support",
-    desc: "Get interview preparation, referrals, and job assistance.",
+    desc: "Get job referrals and assistance.",
     icon: Briefcase,
   },
 ];

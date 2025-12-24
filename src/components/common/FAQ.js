@@ -5,11 +5,11 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Do you provide placement assistance?",
-    a: "Yes, we offer 100% placement assistance including interview preparation, resume building, and job referrals through our network.",
+    a: "Yes, we offer 100% placement assistance and job referrals through our network.",
   },
   {
     q: "Are the classes online or offline?",
-    a: "We provide both options. You can choose fully online, fully offline, or hybrid mode depending on the branch and batch.",
+    a: "We provide both options. You can choose fully online, fully offline, or hybrid mode depending on the branch.",
   },
   {
     q: "Is there any eligibility criteria?",
