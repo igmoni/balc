@@ -1,31 +1,7 @@
-"use client";
-import { useState } from "react";
 import { Send } from "lucide-react";
 
 export default function EnquiryForm() {
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    course: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setForm((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: hook this to API / email / WhatsApp
-    console.log("Enquiry submitted:", form);
-    alert("Thank you! We will contact you soon.");
-    setForm({ name: "", phone: "", email: "", course: "", message: "" });
-  };
-
+  
   return (
     <section className="py-20 bg-blue-50 rounded-xl">
       <div className="max-w-4xl mx-auto px-6">
@@ -38,7 +14,9 @@ export default function EnquiryForm() {
             career options.
           </p>
 
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form action={"https://api.web3forms.com/submit"} method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+           <input type="hidden" name="access_key" value="3a263ec2-ca9e-45aa-a340-a7079867d443" />
+       
             <div className="md:col-span-1">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
@@ -46,8 +24,7 @@ export default function EnquiryForm() {
               <input
                 type="text"
                 name="name"
-                value={form.name}
-                onChange={handleChange}
+                id="name"
                 required
                 className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your full name"
@@ -61,8 +38,7 @@ export default function EnquiryForm() {
               <input
                 type="tel"
                 name="phone"
-                value={form.phone}
-                onChange={handleChange}
+                id="phone"
                 required
                 className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your phone number"
@@ -76,8 +52,7 @@ export default function EnquiryForm() {
               <input
                 type="email"
                 name="email"
-                value={form.email}
-                onChange={handleChange}
+                id="email"
                 className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email"
               />
@@ -89,8 +64,7 @@ export default function EnquiryForm() {
               </label>
               <select
                 name="course"
-                value={form.course}
-                onChange={handleChange}
+                id="course"
                 required
                 className="w-full border rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
@@ -111,8 +85,7 @@ export default function EnquiryForm() {
               </label>
               <textarea
                 name="message"
-                value={form.message}
-                onChange={handleChange}
+                id="message"
                 rows={3}
                 className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Tell us how we can help you..."
