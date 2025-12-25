@@ -5,7 +5,6 @@ import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { useMotionValueEvent, useScroll, useTransform, motion, AnimatePresence } from 'motion/react'
 import { Button } from '../ui/button'
-import { useMediaQuery } from "@uidotdev/usehooks";
 
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { title: "Courses", href: "/courses" },
     { title: "About", href: "/about" },
-    { title: "Blog", href: "/blog" },
+    { title: "Blogs", href: "/blogs" },
     { title: "Contact", href: "/contact" },
     { title: "Careers", href: "/careers" },
   ];
