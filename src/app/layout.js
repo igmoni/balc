@@ -29,7 +29,10 @@ export default function RootLayout({ children }) {
 
         {children}
         </ViewTransitions>
+        <div className="fixed bottom-4 right-4 z-99999">
+
         <Whatsapp/>
+        </div>
         <Footer/>
       </body>
     </html>

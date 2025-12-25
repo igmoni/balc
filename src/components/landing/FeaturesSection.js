@@ -36,7 +36,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50 mb-10">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-900">
           What You Get With Us
@@ -50,7 +50,7 @@ export default function FeaturesSection() {
           {features.map((f, idx) => (
             <div
               key={idx}
-              className="bg-gray-50 rounded-xl p-6 border hover:border-blue-200 hover:shadow-md transition"
+              className="bg-white rounded-xl p-6 border hover:border-blue-200 hover:shadow-md transition"
             >
               <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 text-blue-700 mb-3">
                 <f.icon className="w-5 h-5" />

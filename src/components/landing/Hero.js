@@ -81,10 +81,10 @@ const Hero = () => {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
               >
-                <motion.button whileHover={{ y: -2 }} className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold shadow-lg">
+                <motion.button whileHover={{ y: -2 }} className="bg-yellow-400  text-blue-900 md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold shadow-lg">
                   Enroll Now  
                 </motion.button>
-                <motion.button whileHover={{ y: -2 }} className="bg-white/90 text-blue-700 hover:bg-white px-8 py-4 rounded-lg font-semibold">
+                <motion.button whileHover={{ y: -2 }} className="bg-white/90 text-blue-700 hover:bg-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold">
                   Download Brochure
                 </motion.button>
               </motion.div>
@@ -187,7 +187,7 @@ const Hero = () => {
       </motion.div>
 
       {/* POPUP COURSES */}
-      <div className="max-w-7xl mx-auto px-6 -mt-14 relative z-10">
+      <div className="hidden md:max-w-7xl mx-auto px-6 -mt-14 relative z-10">
         <motion.div
           initial="hidden"
           animate="show"

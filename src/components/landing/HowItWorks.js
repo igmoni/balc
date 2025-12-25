@@ -49,10 +49,9 @@ export default function HowItWorksSection() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="py-20 bg-gray-50"
+      className="py-20 bg-white"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-
         {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
@@ -69,8 +68,8 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-gray-600 mt-2 max-w-2xl mx-auto"
         >
-          A simple and guided journey from choosing your course to getting placed
-          in your dream role.
+          A simple and guided journey from choosing your course to getting
+          placed in your dream role.
         </motion.p>
 
         {/* STEPS */}
@@ -79,14 +78,14 @@ export default function HowItWorksSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12"
+          className="grid grid-cols-1  gap-6 mt-12"
         >
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
               variants={item}
               whileHover={{ y: -8 }}
-              className="bg-white rounded-xl shadow-sm p-6 relative group hover:shadow-xl transition"
+              className="bg-white rounded-xl shadow-sm flex items-center md:gap-10 gap-5 p-6 relative group hover:shadow-xl transition"
             >
               <motion.div
                 whileHover={{ scale: 1.15, rotate: 5 }}
@@ -94,14 +93,13 @@ export default function HowItWorksSection() {
               >
                 <step.icon className="w-6 h-6" />
               </motion.div>
+              <div className="flex flex-col items-start">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
 
-              <h3 className="font-semibold text-gray-900 mb-2">
-                {step.title}
-              </h3>
-
-              <p className="text-sm text-gray-600">
-                {step.desc}
-              </p>
+                <p className="text-sm text-gray-600 text-left">{step.desc}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

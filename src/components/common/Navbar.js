@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   const isClient = typeof window !== "undefined";
-  const isMobile = isClient ? useMediaQuery("(max-width: 768px)") : false;
+  const isMobile = isClient ? window.innerWidth < 768 : false;
 
 
 

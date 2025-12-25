@@ -27,9 +27,9 @@ export default function EnquiryForm() {
   };
 
   return (
-    <section className="py-20 bg-blue-50">
+    <section className="py-20 bg-blue-50 rounded-xl">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div className="bg-white rounded-2xl shadow-acternity p-8 md:p-10">
           <h2 className="text-3xl font-bold text-gray-900 text-center">
             Request a Free Counseling / Demo
           </h2>
