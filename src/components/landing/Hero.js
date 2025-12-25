@@ -187,7 +187,7 @@ const Hero = () => {
       </motion.div>
 
       {/* POPUP COURSES */}
-      <div className="hidden md:max-w-7xl mx-auto px-6 -mt-14 relative z-10">
+      <div className="hidden md:block md:max-w-7xl mx-auto px-6 -mt-14 relative z-10">
         <motion.div
           initial="hidden"
           animate="show"
