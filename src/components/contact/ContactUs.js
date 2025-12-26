@@ -1,8 +1,8 @@
-'use client'
-import { motion } from 'motion/react'
+"use client";
+import { motion } from "motion/react";
 import React from "react";
 import Container from "../common/Container";
-import { contacts } from "@/data/contact";
+import { contacts } from "@/config/contact";
 import { Separator } from "../ui/separator";
 import Mail from "@/svgs/Mail";
 import { PhoneCallIcon } from "lucide-react";

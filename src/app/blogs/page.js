@@ -1,15 +1,15 @@
-import BlogSection from "@/components/blogs/BlogSection";
-import Container from "@/components/common/Container";
-import Hero from "@/components/common/Hero";
-import React from "react";
+import Container from "@/components/common/Container"
+import Hero from "@/components/common/Hero"
+import BlogSection from "@/components/blogs/BlogSection"
+import { getAllBlogs } from "@/lib/blogs"
 
-const page = () => {
+export default async function Page() {
+  const blogs = await getAllBlogs() // ✅ server-only
+
   return (
-    <Container className={"px-5"}>
-      <Hero title={"Blogs"} />
-      <BlogSection />
+    <Container className="px-5">
+      <Hero title="Blogs" />
+      <BlogSection blogs={blogs} />
     </Container>
-  );
-};
-
-export default page;
+  )
+}

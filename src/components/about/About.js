@@ -1,5 +1,5 @@
 import React from "react";
-import { texts, phrases, aboutCards } from "@/data/about";
+import { texts, phrases, aboutCards } from "@/config/about";
 
 const About = () => {
   return (
@@ -40,13 +40,9 @@ const About = () => {
               <Icon size={28} />
             </div>
 
-            <h3 className="text-xl font-semibold text-gray-900">
-              {title}
-            </h3>
+            <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
 
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              {desc}
-            </p>
+            <p className="mt-3 text-gray-600 leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Container from "./Container";
-import { details, links } from "@/data/Footer";
+import { details, links } from "@/config/Footer";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Facebook from "@/svgs/Facebook";

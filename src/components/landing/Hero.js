@@ -1,15 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Clock,
-  CheckCircle,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock, CheckCircle } from "lucide-react";
 import Container from "../common/Container";
-import { heroImages } from "@/data/Hero";
-import { courses } from "@/data/Courses";
+import { heroImages } from "@/config/Hero";
+import { courses } from "@/config/Courses";
 
 const Hero = () => {
   const [imageSlide, setImageSlide] = useState(0);
@@ -30,7 +25,8 @@ const Hero = () => {
   };
 
   const nextImage = () => setImageSlide((p) => (p + 1) % heroImages.length);
-  const prevImage = () => setImageSlide((p) => (p - 1 + heroImages.length) % heroImages.length);
+  const prevImage = () =>
+    setImageSlide((p) => (p - 1 + heroImages.length) % heroImages.length);
 
   return (
     <Container className="pb-10 my-20">
@@ -42,7 +38,6 @@ const Hero = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
             {/* LEFT CONTENT */}
             <div className="space-y-6">
               <motion.div
@@ -61,8 +56,8 @@ const Hero = () => {
                 className="text-4xl lg:text-5xl font-bold leading-snug"
               >
                 Transform Your Career with{" "}
-                <span className="text-yellow-300">Industry-Leading</span>{" "}
-                CAD & IT Training
+                <span className="text-yellow-300">Industry-Leading</span> CAD &
+                IT Training
               </motion.h1>
 
               <motion.p
@@ -71,8 +66,8 @@ const Hero = () => {
                 transition={{ delay: 0.35 }}
                 className="text-lg text-blue-100 max-w-lg"
               >
-                Join 1 Lakh+ successful students across 20+ locations with expert-led
-                training and placement support.
+                Join 1 Lakh+ successful students across 20+ locations with
+                expert-led training and placement support.
               </motion.p>
 
               <motion.div
@@ -81,10 +76,16 @@ const Hero = () => {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
               >
-                <motion.button whileHover={{ y: -2 }} className="bg-yellow-400  text-blue-900 md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold shadow-lg">
-                  Enroll Now  
+                <motion.button
+                  whileHover={{ y: -2 }}
+                  className="bg-yellow-400  text-blue-900 md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold shadow-lg"
+                >
+                  Enroll Now
                 </motion.button>
-                <motion.button whileHover={{ y: -2 }} className="bg-white/90 text-blue-700 hover:bg-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold">
+                <motion.button
+                  whileHover={{ y: -2 }}
+                  className="bg-white/90 text-blue-700 hover:bg-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold"
+                >
                   Download Brochure
                 </motion.button>
               </motion.div>
@@ -106,9 +107,14 @@ const Hero = () => {
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
-                    variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      show: { opacity: 1, y: 0 },
+                    }}
                   >
-                    <div className="text-2xl font-bold text-yellow-300">{stat.value}</div>
+                    <div className="text-2xl font-bold text-yellow-300">
+                      {stat.value}
+                    </div>
                     {stat.label}
                   </motion.div>
                 ))}
@@ -135,10 +141,16 @@ const Hero = () => {
                 </AnimatePresence>
 
                 {/* NAV */}
-                <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:scale-110">
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:scale-110"
+                >
                   <ChevronLeft className="text-blue-700" />
                 </button>
-                <button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:scale-110">
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:scale-110"
+                >
                   <ChevronRight className="text-blue-700" />
                 </button>
 
@@ -149,7 +161,9 @@ const Hero = () => {
                       key={idx}
                       onClick={() => setImageSlide(idx)}
                       className={`h-2 rounded-full transition-all ${
-                        idx === imageSlide ? "bg-yellow-400 w-8" : "bg-white/60 w-2"
+                        idx === imageSlide
+                          ? "bg-yellow-400 w-8"
+                          : "bg-white/60 w-2"
                       }`}
                     />
                   ))}
@@ -162,7 +176,9 @@ const Hero = () => {
                 animate="show"
                 variants={{
                   hidden: {},
-                  show: { transition: { staggerChildren: 0.15, delayChildren: 0.4 } },
+                  show: {
+                    transition: { staggerChildren: 0.15, delayChildren: 0.4 },
+                  },
                 }}
                 className="bg-white/95 backdrop-blur mt-4 rounded-xl shadow p-5 space-y-3 text-sm"
               >
@@ -173,7 +189,10 @@ const Hero = () => {
                 ].map((point, idx) => (
                   <motion.div
                     key={idx}
-                    variants={{ hidden: { opacity: 0, x: -10 }, show: { opacity: 1, x: 0 } }}
+                    variants={{
+                      hidden: { opacity: 0, x: -10 },
+                      show: { opacity: 1, x: 0 },
+                    }}
                     className="text-blue-700 flex items-center"
                   >
                     <CheckCircle className="w-4 h-4 mr-2 text-yellow-500" />
@@ -200,7 +219,10 @@ const Hero = () => {
           {courses.slice(0, 3).map((course, idx) => (
             <motion.div
               key={idx}
-              variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 },
+              }}
               whileHover={{ y: -6 }}
               className="bg-white rounded-xl shadow-lg p-6"
             >

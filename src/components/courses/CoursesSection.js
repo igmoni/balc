@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { courses } from "@/data/coursePage";
+import { courses } from "@/config/coursePage";
 import { motion } from "motion/react";
 import Container from "../common/Container";
 import { Separator } from "../ui/separator";
@@ -25,13 +25,14 @@ const CoursesSection = () => {
 
       <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-10">
         {courses.map((course, idx) => (
-          <motion.div key={idx}
+          <motion.div
+            key={idx}
             initial={{ y: 0 }}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
             className="shadow-acternity hover:shadow-lg rounded-lg"
           >
-            <Link href={course.link}  className="rounded-lg ">
+            <Link href={course.link} className="rounded-lg ">
               <div className="relative rounded-t-lg h-[150px] md:h-[250px] bg-linear-to-br from-blue-50 to-blue-100">
                 <Image
                   src={course.image}
