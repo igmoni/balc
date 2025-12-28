@@ -1,35 +1,44 @@
-import { getBlogsFiles, getBlogBySlug } from "@/lib/blogs";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
+import { notFound } from "next/navigation";
+import { getBlogBySlug, getAllBlogs } from "@/lib/blogs";
+import Container from "@/components/common/Container";
 
-// 1️⃣ Tell Next.js which slugs to build
 export async function generateStaticParams() {
-  const files = await getBlogsFiles();
-
-  return files.map((file) => ({
-    slug: file.replace(/\.mdx?$/, ""),
-  }));
+  const blogs = await getAllBlogs();
+  const slugs = blogs.map((b) => b.slug);
+  console.log(`Static-params:${slugs}`);
+  return slugs.map((slug) => ({ slug }));
 }
 
-// 2️⃣ The page itself (SERVER COMPONENT)
-export default async function BlogPage({ params }) {
-  const { frontmatter, content } = await getBlogBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug;
+  if (!slug) return {};
+
+  const blog = await getBlogBySlug(slug);
+  if (!blog) return {};
+  return {
+    title: blog.frontmatter.title,
+    description: blog.frontmatter.description || "",
+  };
+}
+
+const page = async ({ params }) => {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug;
+  if (!slug) notFound();
+
+  const blog = await getBlogBySlug(slug);
+  if (!blog) notFound();
+
+  const { content, frontmatter } = blog;
+
+  const date = frontmatter.date ? new Date(frontmatter.date) : null;
 
   return (
-    <article className="prose mx-auto">
-      <h1>{frontmatter.title}</h1>
-      {frontmatter.date && <p>{frontmatter.date}</p>}
-
-      <MDXRemote
-        source={content}
-        options={{
-          mdxOptions: {
-            remarkPlugins: [remarkGfm],
-            rehypePlugins: [rehypeSlug],
-          },
-        }}
-      />
-    </article>
+    <Container className={"py-20"}>
+      {content}
+    </Container>
   );
-}
+};
+
+export default page;
