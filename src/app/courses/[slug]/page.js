@@ -1,15 +1,14 @@
 import { notFound } from "next/navigation";
-import { getBlogBySlug, getAllBlogs } from "@/lib/blogs";
 import Container from "@/components/common/Container";
 import Head from "@/components/mdx/Head";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
-import { serialize } from "next-mdx-remote/serialize"
+import { serialize } from "next-mdx-remote/serialize";
+import { getAllCourses, getCourseBySlug } from "@/lib/courses";
 
 export async function generateStaticParams() {
-  const blogs = await getAllBlogs();
-  const slugs = blogs.map((b) => b.slug);
-  console.log(`Static-params:${slugs}`);
+  const courses = await getAllCourses();
+  const slugs = courses.map((c) => c.slug);
   return slugs.map((slug) => ({ slug }));
 }
 
@@ -18,11 +17,11 @@ export async function generateMetadata({ params }) {
   const slug = resolvedParams?.slug;
   if (!slug) return {};
 
-  const blog = await getBlogBySlug(slug);
-  if (!blog) return {};
+  const course = await getCourseBySlug(slug);
+  if (!course) return {};
   return {
-    title: blog.frontmatter.title,
-    description: blog.frontmatter.description || "",
+    title: course.frontmatter.title,
+    description: course.frontmatter.description || "",
   };
 }
 
@@ -30,32 +29,26 @@ const page = async ({ params }) => {
   const resolvedParams = await params;
   const slug = resolvedParams?.slug;
   if (!slug) notFound();
+  const course = await getCourseBySlug(slug);
+  if (!course) notFound();
 
-  const blog = await getBlogBySlug(slug);
-  if (!blog) notFound();
-
-  const { content, frontmatter } = blog;
-
-  const date = frontmatter.date ? new Date(frontmatter.date) : null;
+  const { content, frontmatter } = course
 
   const mdxSource = await serialize(content, {
-    scope: frontmatter, // 👈 REQUIRED
-  });
+    scope: frontmatter
+  })
 
   return (
-    <Container className={"py-20 "}>
-       <MDXRemote
+    <Container className={"py-20"}>
+  <MDXRemote
        soruce={content}
        options={{scope: frontmatter}}
         components={mdxComponents} // 👈 REQUIRED
       />
-      <Head title={frontmatter.title} image={frontmatter.coverImage} />
-      <div className="prose">
-
-      {content}
-        </div>
+      <Head title={frontmatter.title} image={frontmatter.pageImage}/>
+      <div className="prose">{content}</div>
     </Container>
-  );
+  )
 };
 
 export default page;

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { courses } from "@/config/coursePage";
 import { motion } from "motion/react";
 import Container from "../common/Container";
 import { Separator } from "../ui/separator";
@@ -8,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ArrowRight from "@/svgs/ArrowRight";
 
-const CoursesSection = () => {
+const CoursesSection = ({ courses }) => {
   return (
     <Container>
       <div>
@@ -32,10 +31,10 @@ const CoursesSection = () => {
             transition={{ duration: 0.3 }}
             className="shadow-acternity hover:shadow-lg rounded-lg"
           >
-            <Link href={course.link} className="rounded-lg ">
+            <Link href={`/courses/${course.slug}`} className="rounded-lg ">
               <div className="relative rounded-t-lg h-[150px] md:h-[250px] bg-linear-to-br from-blue-50 to-blue-100">
                 <Image
-                  src={course.image}
+                  src={course.coverImage}
                   alt={course.title}
                   fill
                   className="object-fit rounded-t-lg  transition-transform duration-300 "
@@ -49,7 +48,7 @@ const CoursesSection = () => {
 
                 {/* DESCRIPTION */}
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {course.desc}
+                  {course.description}
                 </p>
 
                 {/* META */}
