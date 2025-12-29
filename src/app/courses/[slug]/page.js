@@ -46,7 +46,7 @@ const page = async ({ params }) => {
         components={mdxComponents} // 👈 REQUIRED
       />
       <Head title={frontmatter.title} image={frontmatter.pageImage}/>
-      <div className="prose">{content}</div>
+      <div className="prose prose-neutral ">{content}</div>
     </Container>
   )
 };

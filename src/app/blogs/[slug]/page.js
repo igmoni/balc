@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const blog = await getBlogBySlug(slug);
   if (!blog) return {};
   return {
-    title: blog.frontmatter.title,
+    title: blog.frontmatter.title + "blog by BALC",
     description: blog.frontmatter.description || "",
   };
 }
