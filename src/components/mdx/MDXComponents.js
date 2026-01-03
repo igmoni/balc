@@ -6,20 +6,15 @@ import Head from "./Head";
    TYPOGRAPHY
 ====================================================== */
 
-// const H1 = (props) => (
-//   <h1
-//     className="mt-12 mb-6 text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
-//     {...props}
-//   />
-// );
 
-const H1 = ({children}) => (
-    <h1
-      style={{ color: "red", border: "5px solid red" }}
-      {...props}
-    >MDX h1 props -{children}</h1>
-  );
-  
+const H1 = ({ children, ...props }) => (  // ✅ Include ...props in params
+  <h1
+    style={{ color: "red", border: "5px solid red" }}
+    {...props}
+  >
+    MDX h1 props - {children}
+  </h1>
+);
 
 const H2 = (props) => (
   <h2
