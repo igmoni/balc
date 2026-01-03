@@ -1,28 +1,15 @@
-"use client";
-import { useEffect, useState } from "react";
-import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 import { Badge } from "../ui/badge";
 
 const BlogContent = ({ frontmatter, content }) => {
   const { title, desc, image, tags, date } = frontmatter;
-  const [mdxSource, setMdxSource] = useState(null);
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-
-  useEffect(() => {
-    async function compileMDX() {
-      const { serialize } = await import("next-mdx-remote/serialize");
-      const mdx = await serialize(content);
-      setMdxSource(mdx);
-    }
-    compileMDX();
-  }, [content]);
 
   return (
     <article className="mx-auto max-w-6xl">
@@ -58,7 +45,7 @@ const BlogContent = ({ frontmatter, content }) => {
       </header>
 
       <div className="prose prose-neutral max-w-none ">
-        {mdxSource ? <MDXRemote {...mdxSource} /> : <p className="font-semibold text-black mx-auto">Loading...</p>}
+        {content}
       </div>
     </article>
   );

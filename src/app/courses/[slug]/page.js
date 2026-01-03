@@ -1,10 +1,8 @@
 import { notFound } from "next/navigation";
 import Container from "@/components/common/Container";
 import Head from "@/components/mdx/Head";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { mdxComponents } from "@/components/mdx/MDXComponents";
-import { serialize } from "next-mdx-remote/serialize";
 import { getAllCourses, getCourseBySlug } from "@/lib/courses";
+import { CourseContent } from "@/components/courses/CourseContent";
 
 export async function generateStaticParams() {
   const courses = await getAllCourses();
@@ -32,23 +30,14 @@ const page = async ({ params }) => {
   const course = await getCourseBySlug(slug);
   if (!course) notFound();
 
-  const { content, frontmatter } = course
-
-  const mdxSource = await serialize(content, {
-    scope: frontmatter
-  })
+  const { content, frontmatter } = course;
 
   return (
     <Container className={"py-20"}>
-  <MDXRemote
-       soruce={content}
-       options={{scope: frontmatter}}
-        components={mdxComponents} // 👈 REQUIRED
-      />
-      <Head title={frontmatter.title} image={frontmatter.pageImage}/>
-      <div className="prose prose-neutral ">{content}</div>
+      <Head title={frontmatter.title} image={frontmatter.pageImage} />
+      <CourseContent frontmatter={frontmatter} content={content} />
     </Container>
-  )
+  );
 };
 
 export default page;

@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { validate } from "./mdx/validate";
 import { getReadingTime } from "./mdx/readingTime";
+import BlogComponents from "@/components/blogs/BlogComponents";
 
 const BLOGS_PATH = path.join(process.cwd(), "src/data/blog");
 
@@ -55,6 +56,7 @@ export async function getBlogBySlug(slug) {
   const { content: compiled } = await compileMDX({
     source: content,
     options: { parseFrontmatter: false },
+    components: BlogComponents,
   });
 
   return {

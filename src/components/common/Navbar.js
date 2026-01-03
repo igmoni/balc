@@ -15,6 +15,7 @@ const Navbar = () => {
     { title: "Blogs", href: "/blogs" },
     { title: "Contact", href: "/contact" },
     { title: "Careers", href: "/careers" },
+    { title: "Gallery", href: "/gallery"}
   ];
 
   const isClient = typeof window !== "undefined";

@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { validate } from "./mdx/validate";
 import { getReadingTime } from "./mdx/readingTime";
+import CourseComponents from "@/components/courses/CourseComponents";
 
 const COURSES_PATH = path.join(process.cwd(), "src/data/course");
 
@@ -51,6 +52,7 @@ export async function getCourseBySlug(slug) {
   const { content: compiled } = await compileMDX({
     source: content,
     options: { parseFrontmatter: false },
+    components: CourseComponents,
   });
 
   return {

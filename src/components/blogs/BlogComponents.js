@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import CodeCopyButton from "./CodeCopyButton";
 
 const BlogComponents = {
   img: ({ src, alt, ...props }) => (

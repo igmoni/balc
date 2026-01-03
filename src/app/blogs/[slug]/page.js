@@ -2,9 +2,6 @@ import { notFound } from "next/navigation";
 import { getBlogBySlug, getAllBlogs } from "@/lib/blogs";
 import Container from "@/components/common/Container";
 import Head from "@/components/mdx/Head";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { mdxComponents } from "@/components/mdx/MDXComponents";
-import { serialize } from "next-mdx-remote/serialize"
 import { BlogContent } from "@/components/blogs/BlogContent";
 
 export async function generateStaticParams() {
@@ -39,16 +36,8 @@ const page = async ({ params }) => {
 
   const date = frontmatter.date ? new Date(frontmatter.date) : null;
 
-
-  const mdxSource = await serialize(content);
-
-  // const mdxSource = await serialize(content, {
-  //   scope: frontmatter, // 👈 REQUIRED
-  // });
-
   return (
     <Container className={"py-20 prose"}>
-      <Head title={frontmatter.title} image={frontmatter.coverImage} />
 
       <BlogContent frontmatter={frontmatter} content={content} />
     </Container>
