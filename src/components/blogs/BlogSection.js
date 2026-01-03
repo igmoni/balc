@@ -2,10 +2,9 @@
 
 import Container from "../common/Container";
 import { Separator } from "../ui/separator";
-import Image from "next/image";
-import { motion } from "motion/react";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
+import BlogList from "./BlogList";
 
 const BlogSection = ({ tags, filtered, blogs, activeTag }) => {
   const getTagPostCount = (tag) => {
@@ -33,7 +32,7 @@ const BlogSection = ({ tags, filtered, blogs, activeTag }) => {
         <ul className="flex gap-4 items-center mt-3 flex-wrap">
           {/* ✅ Show Clear Filter ONLY if a tag is selected */}
           {activeTag && (
-            <Link href="/blogs">
+            <Link href="/blog">
               <Badge
                 variant="destructive"
                 className="cursor-pointer rounded-sm"
@@ -49,7 +48,7 @@ const BlogSection = ({ tags, filtered, blogs, activeTag }) => {
             const isSelected = activeTag?.toLowerCase() === tag.toLowerCase();
 
             return (
-              <Link key={idx} href={`/blogs?tag=${tag}`}>
+              <Link key={idx} href={`/blog?tag=${tag}`}>
                 <Badge
                   variant={isSelected ? "default" : "outline"}
                   className="capitalize cursor-pointer rounded-sm hover:bg-accent hover:text-accent-foreground"
@@ -62,38 +61,7 @@ const BlogSection = ({ tags, filtered, blogs, activeTag }) => {
         </ul>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {filtered.map((item) => (
-          <motion.div
-            key={item.slug}
-            initial={{ y: 0 }}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
-            className="shadow-acternity hover:shadow-lg rounded-lg overflow-hidden pb-5 bg-white"
-          >
-            <Link href={`/blogs/${item.slug}`}>
-              <div className="relative w-full h-56">
-                <Image
-                  src={item.coverImage}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-2 pt-3">
-                <h2 className="px-5 text-xl font-semibold hover:underline">{item.title}</h2>
-                <p className="px-5 text-sm text-muted-foreground truncate">
-                  {item.description}
-                </p>
-                <p className="px-5 text-sm text-muted-foreground flex justify-between items-center">
-                  <span>{item.readingTime}</span>
-                  <span>{new Date(item.date).toDateString()}</span>
-                </p>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
+      <BlogList blogs={filtered} />
     </Container>
   );
 };
