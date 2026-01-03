@@ -34,7 +34,6 @@ const page = async ({ params }) => {
 
   return (
     <Container className={"py-20"}>
-      <Head title={frontmatter.title} image={frontmatter.pageImage} />
       <CourseContent frontmatter={frontmatter} content={content} />
     </Container>
   );

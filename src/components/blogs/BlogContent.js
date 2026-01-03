@@ -3,7 +3,7 @@ import { Separator } from "../ui/separator";
 import { Badge } from "../ui/badge";
 
 const BlogContent = ({ frontmatter, content }) => {
-  const { title, desc, image, tags, date } = frontmatter;
+  const { title, description, coverImage, tags, date } = frontmatter;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -13,13 +13,13 @@ const BlogContent = ({ frontmatter, content }) => {
 
   return (
     <article className="mx-auto max-w-6xl">
-      <header className="mb-8 sapce-y-6">
-        <div className="realtive aspect-video overflow-hidden rounded-lg">
+      <header className="mb-8 space-y-6">
+        <div className="relative aspect-video overflow-hidden rounded-xl">
           <Image
-            src={image}
+            src={coverImage}
             alt={title}
             fill
-            className="object-cover"
+            className="object-contain rounded-xl"
             priority
           />
         </div>
@@ -35,7 +35,7 @@ const BlogContent = ({ frontmatter, content }) => {
           <h1 className="text-4xl font-bold leading-tight lg:text-5xl">
             {title}
           </h1>
-          <p className="text-xl text-muted-foreground">{desc}</p>
+          <p className="text-xl text-muted-foreground">{description}</p>
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             {/* <Calendar className="size-6" /> */}
             <time dateTime={date}>{formattedDate}</time>
