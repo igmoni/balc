@@ -21,11 +21,7 @@ const Footer = () => {
       <Container className="text-white  p-5 sm:p-7 mt-20 mb-5 sm:my-32 bg-linear-to-br from-blue-700 via-blue-600 to-blue-800 rounded-xl w-full">
         {/* TOP CTA */}
         <div
-          className="bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(59,130,246,0.15))] 
-          border border-white/40 rounded-xl p-5 w-full
-          flex flex-col sm:flex-row gap-4 sm:gap-0
-          items-start sm:items-center justify-between"
-        >
+          className="bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(59,130,246,0.15))] border border-white/40 rounded-xl p-5 w-full flex flex-col sm:flex-row gap-4 sm:gap-0 items-start sm:items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold tracking-wider">BALC</h1>
             <p className="text-[#c7d2fe]">
@@ -57,8 +53,7 @@ const Footer = () => {
             </div>
 
             <div
-              className="flex flex-col gap-2 bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(59,130,246,0.15))] 
-              border border-white/40 rounded-xl p-5"
+              className="flex flex-col gap-2 bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(59,130,246,0.15))] border border-white/40 rounded-xl p-5"
             >
               <h3 className="text-xl font-semibold">Start Learning</h3>
               <p>Upgrade your career with industry-ready training.</p>

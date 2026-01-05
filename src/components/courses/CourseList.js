@@ -66,11 +66,7 @@ const CourseList = ({ courses, className }) => {
               {/* CTA */}
               <div className="pt-4 group">
                 <span
-                  className="
-              inline-flex items-center gap-2
-              text-sm font-medium text-[#00005D]
-              group-hover:gap-2 transition-all
-            "
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#00005D] group-hover:gap-2 transition-all"
                 >
                   Know more
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
