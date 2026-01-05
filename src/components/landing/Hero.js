@@ -5,10 +5,12 @@ import { ChevronLeft, ChevronRight, Clock, CheckCircle } from "lucide-react";
 import Container from "../common/Container";
 import { heroImages } from "@/config/Hero";
 import { courses } from "@/config/Courses";
+import Link from "next/link";
+
 
 const Hero = () => {
   const [imageSlide, setImageSlide] = useState(0);
-  const startX = useRef(null);
+  const startX = useRef(null); 
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -80,13 +82,18 @@ const Hero = () => {
                   whileHover={{ y: -2 }}
                   className="bg-yellow-400  text-blue-900 md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold shadow-lg"
                 >
+                  <Link href={'/#enquiry'}>
                   Enroll Now
+                  </Link>
                 </motion.button>
                 <motion.button
                   whileHover={{ y: -2 }}
                   className="bg-white/90 text-blue-700 hover:bg-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold"
                 >
+                  <a href="/assets/brochure.pdf" >
+
                   Download Brochure
+                  </a>
                 </motion.button>
               </motion.div>
 

@@ -11,7 +11,7 @@ export default function CoursesSection({ courses }) {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 15 }}

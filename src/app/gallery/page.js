@@ -1,10 +1,12 @@
 import React from 'react'
 import Gallery from '@/components/common/Gallery'
 import Container from '@/components/common/Container'
+import Hero from '@/components/common/Hero'
 
 const page = () => {
   return (
-    <Container className={"py-24 px-5"}>
+    <Container className={" px-5"}>
+      <Hero title={"Gallery"}/>
       <Gallery />
     </Container>
   )

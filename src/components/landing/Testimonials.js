@@ -5,27 +5,37 @@ import Container from "../common/Container";
 
 const testimonials = [
   {
-    name: "Rahul Verma",
-    role: "Junior Architect",
-    text: "The Revit course helped me land my first job within 2 months of finishing training.",
-  },
-  {
-    name: "Neha Patil",
-    role: "Digital Marketer",
-    text: "Hands-down the best training experience. Clear concepts and practical focus.",
+    name: "Ramya",
+    course: "Spoken English",
+    text: "Spoken English classes are very good.",
   },
   {
     name: "Bhavana",
-    role: "Data Science",
+    course: "Data Science",
     text: "One of the best computer course teaching institute so far!! Faculty teaches each concept in detail.",
   },
   {
-    name: "Arjun Shetty",
-    role: "SAP Consultant",
-    text: "Trainers were supportive and the placement help was real, not fake promises.",
+    name: "Shirley Miraclin",
+    course: "HDCP",
+    text: "This computer centre is a very good place to learn coding languages.All the teachers take good care and attention and makes sure that the concept they teach reach the student properly. Excellent and fabulous teachers",
+  },
+  {
+    name: "Sapna S",
+    course: "AD-Dpac",
+    text: "Balc is the institute where students can learn the course very easily.. the faculty members are very friendly in nature..The faculties teaches topics clearly",
+  },
+  {
+    name: "Nehal R",
+    course: "AD-Dpac",
+    text: "It is really nice learning over here.. teachers are really great in explaining the concept and clearing all the doubts..moreover we can come at any time to learn our courses (untill 9)...I highly recommend it.",
+  },
+  {
+    name: "Asfiya Shafi",
+    course: "SAP",
+    text: "I have completed SAP certification from BALC institute. The teaching facility is wonderful and very friendly environment. The faculty is also very supportive. I thank both the BALC institute and SAP faculty for their guidance throughout the completion of the course.",
   },
 ];
- 
+
 const container = {
   hidden: {},
   show: {
@@ -111,7 +121,7 @@ export default function Testimonials() {
                 {/* NAME */}
                 <div className="mt-4">
                   <div className="font-semibold text-gray-900">{t.name}</div>
-                  <div className="text-sm text-gray-500">{t.role}</div>
+                  <div className="text-sm text-gray-500">{t.course}</div>
                 </div>
               </motion.div>
             ))}

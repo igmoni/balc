@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { getBlogBySlug, getAllBlogs } from "@/lib/blogs";
 import Container from "@/components/common/Container";
-import Head from "@/components/mdx/Head";
 import { BlogContent } from "@/components/blogs/BlogContent";
 
 export async function generateStaticParams() {
@@ -37,8 +36,7 @@ const page = async ({ params }) => {
   const date = frontmatter.date ? new Date(frontmatter.date) : null;
 
   return (
-    <Container className={"py-20 prose"}>
-
+    <Container className={"pt-20 prose"}>
       <BlogContent frontmatter={frontmatter} content={content} />
     </Container>
   );

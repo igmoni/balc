@@ -41,4 +41,4 @@ export const ullal = [
     '/gallery/ullal1.png',
     '/gallery/ullal1.png',
     '/gallery/ullal1.png',
-]export 
+]

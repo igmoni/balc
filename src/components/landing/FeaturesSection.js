@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: "Multiple Branches",
-    desc: "Easy access with 20+ locations across Bengaluru and beyond.",
+    desc: "Easy access with 16+ locations across Bengaluru and beyond.",
     icon: MapPin,
   },
   {

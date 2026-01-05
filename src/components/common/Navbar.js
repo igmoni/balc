@@ -12,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { title: "Courses", href: "/courses" },
     { title: "About", href: "/about" },
-    { title: "Blogs", href: "/blog" },
+    { title: "Blog", href: "/blog" },
     { title: "Contact", href: "/contact" },
     { title: "Careers", href: "/careers" },
     { title: "Gallery", href: "/gallery"}

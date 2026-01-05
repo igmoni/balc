@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Container from "@/components/common/Container";
-import Head from "@/components/mdx/Head";
 import { getAllCourses, getCourseBySlug } from "@/lib/courses";
 import { CourseContent } from "@/components/courses/CourseContent";
 
@@ -33,7 +32,7 @@ const page = async ({ params }) => {
   const { content, frontmatter } = course;
 
   return (
-    <Container className={"py-20"}>
+    <Container className={"py-20 px-5"}>
       <CourseContent frontmatter={frontmatter} content={content} />
     </Container>
   );
