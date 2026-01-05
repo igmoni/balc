@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Gallery = () => {
   return (
-    <Container className={"p-10"}>
+    <Container className={"px-10 pt-10"}>
       <Heading branch={"BALC Tollagte"} />
       <div className="py-10 items-center justify-center grid grid-cols-1 md:grid-cols-4 gap-10">
         {tollagte.map((img, idx) => (
@@ -53,14 +53,18 @@ const Gallery = () => {
       <Heading branch={"BALC Ullal Road"} />
       <div className="py-10 items-center justify-center grid grid-cols-1 md:grid-cols-4 gap-10">
         {ullal.map((img, idx) => (
-          <Image
-            src={img}
+          <div
             key={img}
-            width={350}
-            height={250}
-            alt={`Ullal img ${idx}`}
-            className={"object-cover rounded-lg"}
-          />
+            className="relative w-72.5 h-62.5 overflow-hidden rounded-lg"
+          >
+            <Image
+              src={img}
+              alt={`Konankunte img ${idx}`}
+              fill
+              className={`object-cover ${img === "ken6.jpeg" ? "object-top" : ""}`}
+              sizes="350px"
+            />
+          </div>
         ))}
       </div>
     </Container>
