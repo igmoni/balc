@@ -47,4 +47,5 @@ export const links = [
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
     { name: "Careers", href: "/careers" },
+    { name: "Gallery", href: "/gallery"}
   ];

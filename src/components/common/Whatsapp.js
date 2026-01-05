@@ -4,7 +4,7 @@ const Whatsapp = () => {
       href="https://wa.me/+918884708887"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-10 right-10 z-500 p-3 rounded-full bg-green-500"
+      className="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-500 p-3 rounded-full bg-green-500"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

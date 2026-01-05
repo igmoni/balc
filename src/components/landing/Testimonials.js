@@ -5,9 +5,9 @@ import Container from "../common/Container";
 
 const testimonials = [
   {
-    name: "Ramya",
-    course: "Spoken English",
-    text: "Spoken English classes are very good.",
+    name: "Santosh Raj",
+    course: "DCP",
+    text: "I’ve joined the DCP course from march and I was thoroughly impressed by the teaching faculty who taught with utmost dedication and concern, the faulty has always been supportive of my mistakes and made me an avid programming student..",
   },
   {
     name: "Bhavana",
@@ -97,7 +97,7 @@ export default function Testimonials() {
                 key={i}
                 variants={item}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition cursor-default"
+                className="bg-white p-6 rounded-xl flex flex-col items-center justify-center shadow hover:shadow-xl transition cursor-default"
               >
                 {/* STARS */}
                 <motion.div

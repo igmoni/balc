@@ -36,7 +36,7 @@ const page = async ({ params }) => {
   const date = frontmatter.date ? new Date(frontmatter.date) : null;
 
   return (
-    <Container className={"pt-20 prose"}>
+    <Container className={"pt-20 px-5 prose"}>
       <BlogContent frontmatter={frontmatter} content={content} />
     </Container>
   );

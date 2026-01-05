@@ -33,7 +33,7 @@ const Footer = () => {
             variant="outline"
             className="bg-white text-blue-700 font-semibold rounded-full px-4 py-2 hover:bg-accent hover:text-blue-600"
           >
-            <a href="/brochure.pdf">Get brochure</a>
+            <a href="/assets/brochure.pdf">Get brochure</a>
           </Button>
         </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
                 variant="outline"
                 className="bg-white w-fit text-blue-700 font-semibold rounded-full px-4 py-2 hover:bg-accent hover:text-blue-600"
               >
-                <Link href="/courses">Explore courses</Link>
+                <Link href={"/courses"}>Explore courses</Link>
               </Button>
             </div>
           </div>

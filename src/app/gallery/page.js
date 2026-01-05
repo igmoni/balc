@@ -5,7 +5,7 @@ import Hero from '@/components/common/Hero'
 
 const page = () => {
   return (
-    <Container className={" px-5"}>
+    <Container className={"px-5"}>
       <Hero title={"Gallery"}/>
       <Gallery />
     </Container>

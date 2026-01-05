@@ -54,7 +54,7 @@ const Navbar = () => {
 
         <div className='w-full flex justify-between items-center'>
           <Link href={'/'} onClick={() => setIsOpen(false)}>
-            <Image src={'/assets/balc.jpg'} width={isMobile ? 100 : 110} height={isMobile ? 100 : 110} alt='BALC' className='hover:scale-95 rounded-md' />
+            <Image src={'/assets/balc.jpg'} width={isMobile ? 100 : 110} height={isMobile ? 100 : 110} alt='BALC' className='rounded-md hover:scale-95 transition-all duration-200' />
           </Link>
 
           <div className='hidden md:flex rounded-md items-center'>

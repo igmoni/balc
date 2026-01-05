@@ -1,9 +1,10 @@
 import React from "react";
 import { texts, phrases, aboutCards } from "@/config/about";
+import Container from "../common/Container";
 
 const About = () => {
   return (
-    <div className="mt-10">
+    <Container className="mt-10">
       <div className="my-16">
         <h1 className="text-2xl text-center font-bold tracking-tight">
           BALC CADD
@@ -34,7 +35,7 @@ const About = () => {
         {aboutCards.map(({ title, desc, Icon }) => (
           <div
             key={title}
-            className="group bg-white rounded-2xl mx-auto p-8 w-[300px] md:w-[620px] h-auto md:h-[250px] shadow-acternity border border-gray-100 hover:shadow-xl transition"
+            className="group bg-white rounded-2xl mx-auto p-8 w-[300px] md:w-[500px] md:h-[290px]  shadow-acternity border border-gray-100 hover:shadow-xl transition"
           >
             <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-blue-100 text-blue-600 mb-5 group-hover:scale-105 transition">
               <Icon size={28} />
@@ -46,7 +47,7 @@ const About = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 
