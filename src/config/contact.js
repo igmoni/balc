@@ -8,8 +8,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366.38308551804835!2d77.50600773482556!3d12.989770856281005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c47efaa7aab%3A0x28f06fb978b62c7b!2sBALC!5e0!3m2!1sen!2sin!4v1727272212054!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -23,8 +23,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.95461959172!2d77.54925037489302!3d12.97475438734094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd2d18f50b3%3A0xd80c4ad05ca0ee8b!2sBALC%20 !5e0!3m2!1sen!2sin!4v1727260587484!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -38,8 +38,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7776.664551742758!2d77.48389902532759!3d12.950577200000009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f390deeace3%3A0xb27bdc13c9142f19!2sBALC%20Ullala%20Road%20-%20Computer%20Training%20Institute!5e0!3m2!1sen!2sin!4v1727260371443!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -53,8 +53,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.759980399207!2d77.4823181748921!3d12.923142287387748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f83aaad3a19%3A0xadbb52055c7f04a2!2sBALC%20Kengeri%20Upanagar%20-%20Computer%20Training%20institute!5e0!3m2!1sen!2sin!4v1727260896202!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -68,8 +68,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2684371665246!2d77.56145107489155!3d12.890452887417496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1561c539fe33%3A0xe33638a1a65eeb67!2sBALC%20Konanakunte%20Cross!5e0!3m2!1sen!2sin!4v1727270783204!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -83,8 +83,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6768802572883!2d77.58338687489224!3d12.928477187382947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159baa9fffdb%3A0xdea5bdef4c7e61fa!2sBALC%20 %20Training%20Centre%20Jayanagar!5e0!3m2!1sen!2sin!4v1727272466471!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -98,8 +98,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5909953760156!2d77.55077457489342!3d12.997991487319869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3da71f11ebf5%3A0x330dc58b78fe489e!2sBALC%20 %20Training%20Centre%20Rajajinagar!5e0!3m2!1sen!2sin!4v1727433582679!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -113,8 +113,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31101.51990457032!2d77.54685579947905!3d12.99166948881477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162da6275055%3A0xdd282039a4a2fec3!2sBALC%20 %20Training%20Centre%20Malleshwaram!5e0!3m2!1sen!2sin!4v1727435347406!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),
@@ -128,8 +128,8 @@ export const contacts = [
     map: (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4392599486773!2d77.56398517563038!3d12.943720115487785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1577bf052bc9%3A0x71184c0676c88f6c!2sBALC%20 %20Basavanagudi!5e0!3m2!1sen!2sin!4v1738846971585!5m2!1sen!2sin"
-        class="w-full h-full rounded-lg"
-        allowfullscreen=""
+        className="w-full h-full rounded-lg"
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     ),

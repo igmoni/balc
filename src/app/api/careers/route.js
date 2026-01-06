@@ -36,9 +36,9 @@ export const POST = async (req) => {
     }
 
     // 🚀 Send email (non-blocking)
-    resend.emails
+    await resend.emails
       .send({
-        from: "onboarding@resend.dev", // must be verified
+        from: "Careers <onboarding@resend.dev>", // must be verified
         to: process.env.RESEND_TO,
         subject: `New Job Application — ${fullName}`,
         html: `

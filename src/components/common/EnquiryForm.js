@@ -14,9 +14,12 @@ export default function EnquiryForm() {
             career options.
           </p>
 
-          <form action={"https://api.web3forms.com/submit"} method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form action={"https://api.web3forms.com/submit"} method="POST"  noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
            <input type="hidden" name="access_key" value="3a263ec2-ca9e-45aa-a340-a7079867d443" />
-       
+        <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+        <input type="checkbox" name="botcheck" className="hidden" />
+
+
             <div className="md:col-span-1">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
