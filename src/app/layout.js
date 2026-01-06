@@ -5,6 +5,7 @@ import Whatsapp from "@/components/common/Whatsapp";
 import Footer from "@/components/common/Footer";
 import { ViewTransitions } from "next-view-transitions";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <div className="fixed bottom-4 right-4 z-99999">
           <Whatsapp />
         </div>
+        <Analytics />
         <Footer />
       </body>
     </html>
