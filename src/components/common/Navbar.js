@@ -6,25 +6,22 @@ import Image from 'next/image'
 import { useMotionValueEvent, useScroll, useTransform, motion, AnimatePresence } from 'motion/react'
 import { Button } from '../ui/button'
 
+const navItems = [
+  { title: "Courses", href: "/courses" },
+  { title: "About", href: "/about" },
+  { title: "Blog", href: "/blog" },
+  { title: "Contact", href: "/contact" },
+  { title: "Careers", href: "/careers" },
+  { title: "Gallery", href: "/gallery"}
+];
 
 const Navbar = () => {
+  const [hover, setHover] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const navItems = [
-    { title: "Courses", href: "/courses" },
-    { title: "About", href: "/about" },
-    { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/contact" },
-    { title: "Careers", href: "/careers" },
-    { title: "Gallery", href: "/gallery"}
-  ];
 
   const isClient = typeof window !== "undefined";
   const isMobile = isClient ? window.innerWidth < 768 : false;
-
-
-
-  const [hover, setHover] = useState(null)
-  const [isOpen, setIsOpen] = useState(false)
 
   const { scrollY } = useScroll()
 
@@ -101,7 +98,7 @@ const Navbar = () => {
                     <motion.span
                       layoutId="focused-span"
                       className="h-full w-full absolute inset-0 rounded-md bg-neutral-100"
-                    ></motion.span>
+                    />
                   )}
                   <span className="text-primary text-base relative z-10">{item.title}</span>
                 </Link>
