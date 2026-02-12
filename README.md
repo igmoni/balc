@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#BALC — Responsive Course & Brand Website
 
-## Getting Started
+BALC is a modern, responsive website built with Next.js to showcase courses and improve the online presence of the BALC (Bharatiya Academy of Linguistics and Communication) brand.
 
-First, run the development server:
+##🚀 Project Overview
 
-```bash
-npm run dev
+This repository contains the source code for a front-end web application designed to display educational courses, information, and offerings related to the BALC brand. The website is built using Next.js, optimized for fast performance, SEO, and responsive design across devices.
+
+The BALC institution (Bharatiya Academy of Linguistics and Communication) is an educational organization based in Karnataka, India, focused on linguistics, communication, and IT training. Its mission is to empower learners with practical skills in languages, communication, and technology.
+
+##🧱 Features
+
+✔ Responsive UI with modern design principles
+✔ Built on Next.js for optimized performance
+✔ Course display and structured content pages
+✔ Easy customization and deployment
+✔ SEO-friendly structure for better visibility
+
+##📦 Tech Stack
+Technology	Description
+Next.js	React framework for production apps
+React	UI library
+JavaScript	Primary language
+CSS / Tailwind	Styling (depending on project setup)
+Node.js	Runtime environment
+🛠 Getting Started
+
+##Clone the repository:
+
+```git clone https://github.com/IGMONI/BALC.git```
+cd BALC
+
+
+###Install dependencies:
+
+```npm install```
 # or
-yarn dev
+```yarn install```
+
+
+Run the development server:
+
+```npm run dev```
 # or
-pnpm dev
-# or
-bun dev
-```
+```yarn dev```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Visit http://localhost:3000
+ to view the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##📁 Project Structure
+BALC/
+├── public/              # Static assets (images, icons)
+├── src/                 # Source code
+│   ├── components/      # Reusable React components
+│   ├── pages/           # Next.js pages
+│   └── styles/          # Styling files
+├── .gitignore
+├── package.json
+├── next.config.mjs
+└── README.md
 
-## Learn More
+##📌 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+You can deploy this Next.js project using platforms like:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✔ Vercel (recommended)
+✔ Netlify
+✔ GitHub Pages (static export)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##👍 About BALC
 
-## Deploy on Vercel
+Bharatiya Academy of Linguistics and Communication (BALC) is an educational institution founded in 2004 that provides English, computer education, and skill-based training across Karnataka. The academy offers linguistics, communication, IT courses, handwriting improvement, and other skill development programs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Commit your changes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open a Pull Request
